@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 6- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.
+    // Chương trình tìm xem V có nằm trong mảng số nguyên không? Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is not in the array".\
+    var num = parseInt(prompt('Nhap so phan tu trong mang'));
+    var array = [];
+
+    function NhapMang() {
+        for (var i = 0; i < num; i++) {
+            array.push(parseInt(prompt('Nhap Phan Tu ' + (i + 1))));
+        }
+    }
+
+    function KiemTra() {
+        var v = parseInt(prompt('Nhap so can tim la :'));
+        var count = 0;
+        for (var i = 0; i < array.length; i++) {
+            if (array[i] == v) {
+                count++;
+            }
+            if (count == 0) {
+                alert('V is not in the array');
+            } else {
+                alert('V is in the array');
+            }
+        }
+
+    }
+
+    NhapMang();
+    KiemTra();
+</script>
+</body>
+</html>
+</body>
+</html>

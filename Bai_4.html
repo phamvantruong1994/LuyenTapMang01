@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Bài 4- Viết chương trình khởi tạo/nhập vào một mảng số nguyên
+    // và đảo ngược các phần tử trong mảng đó.
+    var num = parseInt(prompt('nhap so phan tu trong mang '));
+    var array = [];
+
+    function NhapMang() {
+        for (i = 0; i < num; i++) {
+            array.push(parseInt(prompt('Nhap phan tu ' + (i + 1))));
+        }
+
+    }
+
+    function KiemTraMax() {
+        for (i = 0; i < array.length/2; i++) {
+            var temp = array[i];
+            array[i] = array[array.length - i - 1];
+            array[array.length - i - 1] = temp;
+        }
+        alert(array);
+
+    }
+
+    NhapMang();
+    KiemTraMax();
+</script>
+</body>
+</html>

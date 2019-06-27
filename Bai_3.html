@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Bài 3- Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó.
+    // In ra giá trị trung bình của các phần tử trong mảng.
+    var num = parseInt(prompt('nhap so phan tu trong mang'));
+    var array = [];
+
+    function KiemTra() {
+        for (var i = 0; i < num; i++) {
+            array.push(parseInt(prompt('Nhap Phan Tu ' + (i + 1))));
+        }
+    }
+
+    function KiemTraMax() {
+        var max = array[0];
+        for (var i = 0; i < max; i++) {
+            if (max < array[i]) {
+                max = array[i];
+            }
+        }
+        alert('max ' + ' =' + max);
+    }
+
+    function TinhAvg() {
+        var sum = 0;
+        var avg;
+        for (var i = 0; i < array.length; i++) {
+            sum += array[i];
+
+        }
+        avg = sum / array.length;
+        alert('avg =' + avg);
+
+    }
+
+    KiemTra();
+    KiemTraMax();
+    TinhAvg();
+</script>
+</body>
+</html>
