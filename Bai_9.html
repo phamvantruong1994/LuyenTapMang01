@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Bài 9- Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b.
+    // Mảng c là một mảng được khai báo gồm 20 phần tử số nguyên.
+    // Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.\
+    var arrayA=[];
+    var arrayB=[];
+    function NhapMangA() {
+        var numA = parseInt(prompt('Nhap so phan tu mang A'));
+        for (var i=0; i< numA ; i++){
+            arrayA.push(parseInt(prompt('Nhap phan tu ' +(i+1))));
+        }
+
+    }
+    function NhapMangB() {
+        var numB=parseInt(prompt('Nhap so phan tu mang B'));
+        for (var i=0; i<numB;i++){
+            arrayB.push(parseInt(prompt('Nhap phan tu '+(i+1))));
+        }
+
+    }
+    function NoiMang() {
+        var arrayC = arrayA.concat(arrayB);
+        alert('ARRAY C =' +arrayC);
+
+    }
+    NhapMangA();
+    NhapMangB();
+    NoiMang();
+</script>
+</body>
+</html>
